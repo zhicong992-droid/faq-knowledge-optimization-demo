@@ -14,10 +14,12 @@ class QuestionGenerator(Protocol):
 
 class RuleQuestionGenerator:
     def generate(self, faq: FAQ) -> list[str]:
+        stem = faq.question.rstrip("？?。 ")
+        object_text = stem.removeprefix("如何")
         return [
-            f"请问如何办理{faq.question.lstrip('如何')}？",
-            f"我想了解{faq.question.rstrip('？')}的具体步骤",
-            f"如果线上操作失败，{faq.question.rstrip('？')}还有什么办法？",
+            f"请问怎么{object_text}？",
+            f"我想了解{stem}的具体步骤",
+            f"如果线上操作失败，{stem}还有什么办法？",
         ]
 
 
