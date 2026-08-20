@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ Knowledge Operations</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">KNOWLEDGE OPERATIONS</span><h1>FAQ 运营控制台</h1></div>
+    <span class="status"><i></i> Demo workspace</span>
+  </header>
+  <main>
+    <section class="metrics" id="metrics"></section>
+    <section class="workspace">
+      <div class="panel search-panel">
+        <div class="panel-head"><div><span class="eyebrow">RETRIEVAL</span><h2>检索试运行</h2></div><span class="tag">BM25 + Dense + RRF</span></div>
+        <form id="search-form"><input id="query" placeholder="输入用户问法，例如：忘记密码怎么改？" required><button>检索</button></form>
+        <div id="search-results" class="results empty">输入问题查看召回结果</div>
+      </div>
+      <div class="panel agent-panel">
+        <div class="panel-head"><div><span class="eyebrow">AGENT LOOP</span><h2>三阶段优化</h2></div><span class="tag accent">Plan → Execute → Reflection</span></div>
+        <p class="muted">运行健康治理、Badcase 策略和 FAQ 对练补全，候选动作不会直接发布。</p>
+        <button id="run-agent" class="primary">运行运营 Agent</button>
+        <div id="agent-output" class="agent-output empty">等待运行</div>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
