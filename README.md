@@ -1,8 +1,6 @@
 # FAQ Knowledge Operations Demo
 
-一个完全脱敏的 FAQ 知识运营 Agent 演示项目，展示从知识库体检、线上 Badcase 策略到问法补全的三阶段闭环。
-
-这个仓库是独立编写的作品集演示，不包含公司代码、客户名称、内部接口、日志、数据集或凭证。检索和优化逻辑使用可复现的本地实现，便于直接运行和面试演示。
+一个 FAQ 知识运营 Agent 演示项目，展示从知识库体检、线上 Badcase 策略到问法补全的三阶段闭环。
 
 ## 能力概览
 
@@ -45,6 +43,3 @@ frontend/
 tests/
 ```
 
-## 设计边界
-
-演示仓库刻意不连接外部 LLM、向量数据库或企业系统。`QuestionGenerator`、`Reranker` 和 `ActionExecutor` 都是可替换接口，实际项目可以接入模型、Qdrant/PGVector、人工审核系统和灰度发布平台。
